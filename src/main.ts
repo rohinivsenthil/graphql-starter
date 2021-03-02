@@ -5,6 +5,6 @@ import { GqlExceptionFilter } from './filters/exceptions.filter';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.useGlobalFilters(new GqlExceptionFilter());
-  await app.listen(3000);
+  await app.listen(8080);
 }
 bootstrap();
