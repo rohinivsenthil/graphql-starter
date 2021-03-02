@@ -1,0 +1,22 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type userResponse {
+  """First name of the user"""
+  firstName: String!
+
+  """Last name of the user"""
+  lastName: String!
+
+  """Email of the user"""
+  email: String!
+}
+
+type Query {
+  """Get user details"""
+  getUser(
+    """Payload for retrieving user details"""
+    email: String!
+  ): userResponse!
+}
