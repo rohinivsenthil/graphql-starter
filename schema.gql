@@ -2,21 +2,55 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
-type userResponse {
-  """First name of the user"""
-  firstName: String!
+type postResponse {
+  """Unique identifier string of the post"""
+  id: String!
 
-  """Last name of the user"""
-  lastName: String!
+  """Title of the post"""
+  title: String!
 
-  """Email of the user"""
-  email: String!
+  """Summary/Description the post"""
+  description: String!
+
+  """Author of the post"""
+  author: String!
 }
 
 type Query {
   """Get user details"""
-  getUser(
-    """Payload for retrieving user details"""
-    email: String!
-  ): userResponse!
+  getPosts: [postResponse!]!
+}
+
+type Mutation {
+  """Get user details"""
+  createPost(
+    """Payload for creating a new post"""
+    data: PostData!
+  ): String!
+
+  """Get user details"""
+  deletePost(
+    """ID of the post that needs to be deleted"""
+    id: String!
+  ): String!
+
+  """Get user details"""
+  updatePost(
+    """Payload for updating an existing post"""
+    data: PostData!
+
+    """ID of the post that needs to be deleted"""
+    id: String!
+  ): String!
+}
+
+input PostData {
+  """Title of the post"""
+  title: String!
+
+  """Summary/Description the post"""
+  description: String!
+
+  """Author of the post"""
+  author: String!
 }

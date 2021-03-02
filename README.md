@@ -8,7 +8,7 @@
 # install dependencies
 $ yarn install
 # start service
-$ nest start
+$ yarn start
 ```
 
 Navigate to http://localhost:8080/graphql in your browser and you will see the graphql playground.
