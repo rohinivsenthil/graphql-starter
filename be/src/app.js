@@ -1,10 +1,10 @@
 import express from 'express';
 import expressGraphql from 'express-graphql';
 import graphqlTools from 'graphql-tools';
+import expressPlayground from 'graphql-playground-middleware-express'
 
 import typeDefs from './schema.js';
 import resolvers from './resolvers.js';
-import expressPlayground from 'graphql-playground-middleware-express'
 
 const { graphqlHTTP } = expressGraphql;
 const { makeExecutableSchema } = graphqlTools;

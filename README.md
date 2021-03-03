@@ -5,7 +5,8 @@
 ### Backend service
 
 ```bash
-# install deps
+$ cd be
+# install dependencies
 $ yarn install
 # start server
 $ yarn start
@@ -14,8 +15,8 @@ $ yarn start
 ### Frontend service
 
 ```bash
-cd fe
-# install deps
+$ cd fe
+# install dependencies
 $ yarn install
 # start server
 $ yarn start
