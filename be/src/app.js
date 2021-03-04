@@ -1,23 +1,23 @@
-import express from 'express';
-import expressGraphql from 'express-graphql';
-import graphqlTools from 'graphql-tools';
-import expressPlayground from 'graphql-playground-middleware-express'
-import cors from 'cors';
+const express = require('express');
+const expressGraphql = require('express-graphql');
+const graphqlTools = require('graphql-tools');
+const expressPlayground = require('graphql-playground-middleware-express');
+const cors = require('cors');
 
-import typeDefs from './schema.js';
-import resolvers from './resolvers.js';
+const typeDefs = require('./schema.js');
+const resolvers = require('./resolvers.js');
 
 const { graphqlHTTP } = expressGraphql;
 const { makeExecutableSchema } = graphqlTools;
 
 const app = express();
 
-app.use(cors({ origin: '*' }))
+app.use(cors({ origin: '*' }));
 
-app.get('/', expressPlayground.default({ endpoint: '/' }))
+app.get('/', expressPlayground.default({ endpoint: '/' }));
 app.use('/', graphqlHTTP({
   schema: makeExecutableSchema({ typeDefs, resolvers }),
   // graphiql: true,
 }));
 
-export default app;
+module.exports = app;

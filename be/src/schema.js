@@ -1,4 +1,4 @@
-const typeDefs = `
+module.exports = `
   input PostInput {
     title: String
     description: String
@@ -16,11 +16,10 @@ const typeDefs = `
     ping: String!
     posts: [Post]
   }
+  
   type Mutation {
     createPost(data: PostInput): String!
     updatePost(id: String!, data: PostInput): String!
     deletePost(id: String!): String!
   }
 `;
-
-export default typeDefs;
