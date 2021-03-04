@@ -9,6 +9,7 @@ const Landing = () => {
 
   return (
     <div className={styles.pageWrapper}>
+      <div className={styles.pageHeading}>Post it!</div>
       <PostContainer postsData={data ? data.posts : []} />
     </div>
   );

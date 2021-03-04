@@ -1,6 +1,13 @@
 .pageWrapper {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.pageHeading {
+  margin: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
 }

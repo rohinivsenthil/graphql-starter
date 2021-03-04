@@ -15,28 +15,21 @@ const PostCointainer = ({ postsData }) => {
   ));
 
   return (
-    <div className={styles.container}>
-      {posts}
+    <div className={styles.postContainer}>
+      <div className={styles.postsWrapper}>
+        {posts}
+      </div>
     </div>
   );
 };
 
 PostCointainer.propTypes = {
   postsData: propTypes.arrayOf(propTypes.shape({
-    id: propTypes.string,
-    title: propTypes.string,
-    description: propTypes.string,
-    author: propTypes.string,
-  })),
-};
-
-PostCointainer.defaultProps = {
-  postsData: [{
-    id: '34567-ertyui-567-xcvbnm',
-    title: 'Post Title',
-    description: 'Lorem ipsum',
-    author: 'John Doe',
-  }],
+    id: propTypes.string.isRequired,
+    title: propTypes.string.isRequired,
+    description: propTypes.string.isRequired,
+    author: propTypes.string.isRequired,
+  })).isRequired,
 };
 
 export default PostCointainer;
