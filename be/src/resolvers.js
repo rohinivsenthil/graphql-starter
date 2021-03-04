@@ -4,7 +4,8 @@ import { v4 } from 'uuid';
 const resolvers = {
   Query: {
     ping: () => 'Pong',
-    getPosts: () => {
+    posts: () => {
+      console.log('hit');
       return JSON.parse(fs.readFileSync('posts.json'));
     },
   },

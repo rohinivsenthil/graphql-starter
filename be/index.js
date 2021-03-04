@@ -1,4 +1,6 @@
 import app from './src/app.js';
 
-app.listen(3000);
-console.log('Server started')
+app.listen(8080, () => {
+  console.log('Server listening at port: 8080');
+});
+

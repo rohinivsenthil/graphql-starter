@@ -14,7 +14,7 @@ const typeDefs = `
 
   type Query {
     ping: String!
-    getPosts: [Post]
+    posts: [Post]
   }
   type Mutation {
     createPost(data: PostInput): String!
