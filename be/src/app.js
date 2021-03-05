@@ -14,10 +14,10 @@ const app = express();
 
 app.use(cors({ origin: '*' }));
 
-app.get('/', expressPlayground.default({ endpoint: '/' }));
-app.use('/', graphqlHTTP({
+app.use('/graphql', graphqlHTTP({
   schema: makeExecutableSchema({ typeDefs, resolvers }),
   // graphiql: true,
 }));
+app.get('/', expressPlayground.default({ endpoint: '/graphql' }));
 
 module.exports = app;
